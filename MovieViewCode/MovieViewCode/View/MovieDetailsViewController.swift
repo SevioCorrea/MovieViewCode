@@ -67,16 +67,53 @@ class MovieDetailsViewController: UIViewController {
     private lazy var imagePoster: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.layer.cornerRadius = 32.0
+        imgView.layer.cornerRadius = 10.0
         imgView.layer.masksToBounds = true
         return imgView
     }()
+    
+    private lazy var likeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.textColor = .white.withAlphaComponent(0.75)
+        label.attributedText = NSAttributedString(string: "Like").withLineSpacing(8.0)
+        return label
+    }()
+    
+    private lazy var buttonFav: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "heart"), for: .normal)
+        button.tintColor = .systemRed
+        button.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchUpInside)
+        return button
+    }()
+    var boleano: Bool = true
+    @objc func tappedButton(sender: UIButton) {
+        
+        switch boleano {
+        case true:
+            buttonFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            print(UIScreen.main.bounds)
+            return boleano = false
+        case false:
+            buttonFav.setImage(UIImage(systemName: "heart"), for: .normal)
+            return boleano = true
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.setBackground()
+        setBackground()
         setLayout()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    private func setBackground() {
+        view.backgroundColor = UIColor(red: 0.17, green: 0.24, blue: 0.31, alpha: 1.00)
     }
     
     init(movie: Filmes) {
@@ -91,7 +128,7 @@ class MovieDetailsViewController: UIViewController {
     }
     
     private func setLayout() {
-        navigationController?.navigationBar.tintColor = UIColor.white
+        //navigationController?.navigationBar.tintColor = UIColor.white
         
         view.addSubview(titleLabel)
         view.addSubview(imagePoster)
@@ -99,8 +136,21 @@ class MovieDetailsViewController: UIViewController {
         view.addSubview(descriptionLabel)
         view.addSubview(userPopularity)
         view.addSubview(voteCount)
+        view.addSubview(buttonFav)
+        view.addSubview(likeLabel)
         
         NSLayoutConstraint.activate([
+//            buttonFav.centerXAnchor.constraint(equalTo: titleLabel.rightAnchor),
+//            buttonFav.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            buttonFav.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 150),
+//            buttonFav.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -150),
+//            buttonFav.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 35.0),
+            buttonFav.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -10),
+            buttonFav.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 380),
+            likeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -9),
+            likeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 345),
+            
+            
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32.0),
             titleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),

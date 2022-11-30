@@ -31,7 +31,7 @@ class MovieTableViewCell: UITableViewCell {
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.layer.cornerRadius = 18.0
         imgView.layer.masksToBounds = true
-        imgView.backgroundColor = .red
+        imgView.backgroundColor = .black
         return imgView
     }()
     

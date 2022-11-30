@@ -8,14 +8,6 @@
 import Foundation
 
 class Network {
-//    private func getAPIKey() -> String? {
-//        var keys: NSDictionary?
-//        if let path = Bundle.main.path(forResource: "Keys", ofType: "plist") {
-//                keys = NSDictionary(contentsOfFile: path)
-//                return keys?["65505ca00f087a4d2b5b28a3f15f7374"] as? String
-//            }
-//        return nil
-//    }
     
     private func getURLPopularMovies() -> String {
         let APIKey = "65505ca00f087a4d2b5b28a3f15f7374"
