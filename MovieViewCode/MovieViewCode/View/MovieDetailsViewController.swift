@@ -10,6 +10,12 @@ import Kingfisher
 
 class MovieDetailsViewController: UIViewController {
     
+    let contentScrollView: UIScrollView = {
+        let scrollView = UIScrollView(frame: .zero)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
     private var movie: Filmes
     
     private lazy var titleLabel: UILabel = {
@@ -46,9 +52,7 @@ class MovieDetailsViewController: UIViewController {
     private lazy var voteCount: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Votos: \(movie.formatPoints(from: movie.vote_count))"
-        print(movie.popularity)
-        print(movie.vote_count)
+        label.text = "Likes: \(movie.formatPoints(from: movie.vote_count))"
         label.numberOfLines = 0
         label.textColor = .white
         label.font = .systemFont(ofSize: 16.0, weight: .bold)
@@ -95,7 +99,7 @@ class MovieDetailsViewController: UIViewController {
         switch boleano {
         case true:
             buttonFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            print(UIScreen.main.bounds)
+            
             return boleano = false
         case false:
             buttonFav.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -128,7 +132,6 @@ class MovieDetailsViewController: UIViewController {
     }
     
     private func setLayout() {
-        //navigationController?.navigationBar.tintColor = UIColor.white
         
         view.addSubview(titleLabel)
         view.addSubview(imagePoster)
@@ -138,13 +141,10 @@ class MovieDetailsViewController: UIViewController {
         view.addSubview(voteCount)
         view.addSubview(buttonFav)
         view.addSubview(likeLabel)
+        view.addSubview(contentScrollView)
         
         NSLayoutConstraint.activate([
-//            buttonFav.centerXAnchor.constraint(equalTo: titleLabel.rightAnchor),
-//            buttonFav.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            buttonFav.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 150),
-//            buttonFav.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -150),
-//            buttonFav.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 35.0),
+            
             buttonFav.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -10),
             buttonFav.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 380),
             likeLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -9),

@@ -48,13 +48,13 @@ extension Filmes: CustomStringConvertible {
         switch finalNumber {
         case 0...999999:
             let finalNumber = finalNumber / 1000
-            return ("\(round(finalNumber*10/10))K")
+            return ("\(round(finalNumber*10)/10)K")
             
-        case 0...1000000:
+        case 999999...999999999:
             let finalNumber = finalNumber / 1000000
             return "\(round(finalNumber*10)/10)M"
             
-        case 0...1000000000:
+        case 999999999...999999999999:
             let finalNumber = finalNumber / 1000000000
             return "\(round(finalNumber*10)/10)B"
         default:

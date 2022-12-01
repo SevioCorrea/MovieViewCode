@@ -17,9 +17,7 @@
 		22C31DE3293675E800402E5B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DE2293675E800402E5B /* MovieTableViewCell.swift */; };
 		22C31DE529367C0300402E5B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DE429367C0300402E5B /* Network.swift */; };
 		22C31DFB2936A28600402E5B /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DF62936A28600402E5B /* NSAttributedString.swift */; };
-		22C31DFC2936A28600402E5B /* UIViewMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DF72936A28600402E5B /* UIViewMovie.swift */; };
 		22C31DFD2936A28600402E5B /* StringMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DF82936A28600402E5B /* StringMovie.swift */; };
-		22C31DFE2936A28600402E5B /* UIColorMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DF92936A28600402E5B /* UIColorMovie.swift */; };
 		22C31DFF2936A28600402E5B /* UIImageViewMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C31DFA2936A28600402E5B /* UIImageViewMovie.swift */; };
 		65E367E7305D56DE37472BB3 /* Pods_MovieViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95EECFB772014BA58879A2B /* Pods_MovieViewCode.framework */; };
 /* End PBXBuildFile section */
@@ -37,9 +35,7 @@
 		22C31DE2293675E800402E5B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		22C31DE429367C0300402E5B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		22C31DF62936A28600402E5B /* NSAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = SOURCE_ROOT; };
-		22C31DF72936A28600402E5B /* UIViewMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewMovie.swift; sourceTree = SOURCE_ROOT; };
 		22C31DF82936A28600402E5B /* StringMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMovie.swift; sourceTree = SOURCE_ROOT; };
-		22C31DF92936A28600402E5B /* UIColorMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorMovie.swift; sourceTree = SOURCE_ROOT; };
 		22C31DFA2936A28600402E5B /* UIImageViewMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewMovie.swift; sourceTree = SOURCE_ROOT; };
 		53B3592CEC024D381E26D262 /* Pods-MovieViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieViewCode.release.xcconfig"; path = "Target Support Files/Pods-MovieViewCode/Pods-MovieViewCode.release.xcconfig"; sourceTree = "<group>"; };
 		B95EECFB772014BA58879A2B /* Pods_MovieViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,9 +127,7 @@
 			children = (
 				22C31DF62936A28600402E5B /* NSAttributedString.swift */,
 				22C31DF82936A28600402E5B /* StringMovie.swift */,
-				22C31DF92936A28600402E5B /* UIColorMovie.swift */,
 				22C31DFA2936A28600402E5B /* UIImageViewMovie.swift */,
-				22C31DF72936A28600402E5B /* UIViewMovie.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C31DFC2936A28600402E5B /* UIViewMovie.swift in Sources */,
 				22C31DE529367C0300402E5B /* Network.swift in Sources */,
 				22C31DE1293671E200402E5B /* MovieDetailsViewController.swift in Sources */,
 				22C31DE3293675E800402E5B /* MovieTableViewCell.swift in Sources */,
@@ -278,7 +271,6 @@
 				22C31DFD2936A28600402E5B /* StringMovie.swift in Sources */,
 				22C31DC429364CC900402E5B /* ViewController.swift in Sources */,
 				22C31DC029364CC900402E5B /* AppDelegate.swift in Sources */,
-				22C31DFE2936A28600402E5B /* UIColorMovie.swift in Sources */,
 				22C31DC229364CC900402E5B /* SceneDelegate.swift in Sources */,
 				22C31DD829365F8000402E5B /* Filmes.swift in Sources */,
 			);
