@@ -24,7 +24,7 @@ class MovieDetailsViewController: UIViewController {
         label.text = movie.title
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.textColor = .white
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .systemFont(ofSize: 24.0, weight: .bold)
         return label
     }()
@@ -34,7 +34,7 @@ class MovieDetailsViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Classificação dos usuários: \(movie.voteAverage)"
         label.numberOfLines = 0
-        label.textColor = .white
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .systemFont(ofSize: 16.0, weight: .bold)
         return label
     }()
@@ -44,7 +44,7 @@ class MovieDetailsViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Popularidade: \(movie.formatPoints(from: movie.popularity))"
         label.numberOfLines = 0
-        label.textColor = .white
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .systemFont(ofSize: 16.0, weight: .bold)
         return label
     }()
@@ -54,7 +54,7 @@ class MovieDetailsViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Likes: \(movie.formatPoints(from: movie.vote_count))"
         label.numberOfLines = 0
-        label.textColor = .white
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .systemFont(ofSize: 16.0, weight: .bold)
         return label
     }()
@@ -63,7 +63,7 @@ class MovieDetailsViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.textColor = .white.withAlphaComponent(0.75)
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 0.75)
         label.attributedText = NSAttributedString(string: movie.overview).withLineSpacing(8.0)
         return label
     }()
@@ -80,7 +80,7 @@ class MovieDetailsViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.textColor = .white.withAlphaComponent(0.75)
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.attributedText = NSAttributedString(string: "Like").withLineSpacing(8.0)
         return label
     }()
@@ -89,7 +89,7 @@ class MovieDetailsViewController: UIViewController {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "heart"), for: .normal)
-        button.tintColor = .systemRed
+        button.tintColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         button.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchUpInside)
         return button
     }()
@@ -117,7 +117,7 @@ class MovieDetailsViewController: UIViewController {
     
     
     private func setBackground() {
-        view.backgroundColor = UIColor(red: 0.17, green: 0.24, blue: 0.31, alpha: 1.00)
+        view.backgroundColor = UIColor(red: 0.13, green: 0.18, blue: 0.16, alpha: 1.00)
     }
     
     init(movie: Filmes) {

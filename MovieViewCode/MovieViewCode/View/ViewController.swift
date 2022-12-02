@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     private lazy var titleView: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Filmes Populares"
-        label.textColor = .white
+        label.text = "Dimensa Movies"
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .systemFont(ofSize: 24.0, weight: .bold)
         return label
     }()
@@ -60,6 +60,7 @@ class ViewController: UIViewController {
     private func setLayout() {
         view.addSubview(titleView)
         view.addSubview(tableView)
+        view.backgroundColor = UIColor(red: 0.13, green: 0.18, blue: 0.16, alpha: 1.00)
         
         NSLayoutConstraint.activate([
             titleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

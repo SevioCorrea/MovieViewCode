@@ -13,7 +13,7 @@ class MovieTableViewCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .boldSystemFont(ofSize: 20.0)
         label.numberOfLines = 0
         return label
@@ -22,7 +22,7 @@ class MovieTableViewCell: UITableViewCell {
     private lazy var releaseDateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white.withAlphaComponent(0.75)
+        label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 0.75)
         return label
     }()
     
