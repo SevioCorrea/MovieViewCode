@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     }
     
 }
-// MARK: - Extensão para a Table View
+// MARK: - Extensão para a Table View, criação da célula
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as? MovieTableViewCell {

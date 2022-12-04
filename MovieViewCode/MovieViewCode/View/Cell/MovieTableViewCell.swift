@@ -74,6 +74,7 @@ class MovieTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Configurando a célula para a ViewController
     func configureCell(movie: Filmes) {
         setConstraints()
         titleLabel.text = movie.title

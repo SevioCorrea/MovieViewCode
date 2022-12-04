@@ -99,7 +99,6 @@ class MovieDetailsViewController: UIViewController {
         switch boleano {
         case true:
             buttonFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            
             return boleano = false
         case false:
             buttonFav.setImage(UIImage(systemName: "heart"), for: .normal)
