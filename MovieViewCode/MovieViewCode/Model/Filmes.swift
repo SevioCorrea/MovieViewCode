@@ -42,30 +42,25 @@ extension Filmes: CustomStringConvertible {
     func formatPoints(from: Double) -> String {
         
         let number = Double(from)
-        let finalNumber = number
+        let finalNumber = number.formatted(.number.notation(.compactName).locale(.init(identifier: "en_US"))) // Apenas disponível no iOS 15 pra cima
         
         
-        switch finalNumber {
-        case 0...999999:
-            let finalNumber = finalNumber.formatted(.number.notation(.compactName).locale(.init(identifier: "en_US")))
-            return "\(finalNumber)"
+//        switch finalNumber {
+//        case 0...999999:
 //            let finalNumber = finalNumber / 1000
 //            return ("\(round(finalNumber*10)/10)K")
-            
-        case 999999...999999999:
-            let finalNumber = finalNumber.formatted(.number.notation(.compactName).locale(.init(identifier: "en_US")))
+//
+//        case 999999...999999999:
 //            let finalNumber = finalNumber / 1000000
 //            return "\(round(finalNumber*10)/10)M"
-            
-        case 999999999...999999999999:
-            let finalNumber = finalNumber.formatted(.number.notation(.compactName).locale(.init(identifier: "en_US")))
+//
 //            let finalNumber = finalNumber / 1000000000
 //            return "\(round(finalNumber*10)/10)B"
-        default:
-            print("Default")
-        }
-        
-        return "\(number)"
+//        default:
+//            print("Default")
+//        }
+//
+       return "\(finalNumber)"
     }
 
 }
