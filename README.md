@@ -5,5 +5,3 @@
 
 * O app tem o botão de Likes funcionando para preenchido e vazio, sendo o vazio seu estado normal.
 * Também há a conversão dos números de Popularidade e Likes para K, M, ou B.
-
-Easter Egg no App Icon.
