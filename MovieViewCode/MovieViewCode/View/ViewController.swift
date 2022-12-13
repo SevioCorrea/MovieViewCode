@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     private lazy var titleView: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Dimensa Movies"
+        label.text = "Movies"
         label.textColor = UIColor(red: 0.47, green: 0.60, blue: 0.00, alpha: 1.00)
         label.font = .systemFont(ofSize: 24.0, weight: .bold)
         return label

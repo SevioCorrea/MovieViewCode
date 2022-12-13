@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 
+
 class MovieDetailsViewController: UIViewController {
     
     let contentScrollView: UIScrollView = {
@@ -93,6 +94,22 @@ class MovieDetailsViewController: UIViewController {
         button.addTarget(self, action: #selector(self.tappedButton(sender:)), for: .touchUpInside)
         return button
     }()
+    
+    // Poderia ter feito um Delegate aqui, com a lógica do que é feito quando o botão é pressionado e chamar o delegate dentro do addTarget acima.
+    
+//    class MyButtonDelegate {
+//        var boleano: Bool = true
+//        func buttonWasClicked {
+    
+//        // Lógica do @objc func tappedButton(sender: UIButton) {}
+    
+//      }
+//    }
+//    let delegate = MuButtonDelegate() // Instancia o Delegate
+    
+//      Depois é só chamar o Delegate no Selector: -> button.addTarget(delegate, action: #selector(delegate.buttonWasClicked(sender:)), for: .touchUpInside)
+    
+    
     var boleano: Bool = true
     @objc func tappedButton(sender: UIButton) {
         
